@@ -1,0 +1,138 @@
+
+*{
+  padding: 0%;
+  margin: 0%;
+  /* border:1px solid brown; */
+}
+body{
+  max-width: fit-content;
+  /* min-height: 2000px; */
+}
+::placeholder {
+  font-size: 13px;
+  color: darkslategray;
+}
+  .ok{
+    border: 2px solid black;height:45px;width:300px;
+    margin-right: 20px;
+    border-radius:15px;
+    padding-left: 20px;
+  }
+  .btn1{
+    height: 45px;
+    width: 120px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 25px;
+    
+  }
+  .img-back {
+    position: absolute;
+    height: 488px;
+    width: 390px;
+    background-color: black;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+  .img{
+    position: absolute;
+    transform: translate(-8px,-104px);
+    animation-fill-mode: forwards;
+    z-index: -3;
+    width: 100vw;
+    height: 100vh;
+  }
+  .tint{
+    padding: 0%;
+    margin: 0;
+    position:absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0.5, 0.5, 0.5, 0.6);
+    
+    z-index: -2;
+    /* background-blend-mode: multiply; */
+  }
+
+.value{
+  max-width: 97vw;
+  overflow-wrap: break-word;
+
+  padding: 20px;
+}
+
+.container{
+  border: 1px solid gray;
+  width: 97vw;
+  margin-bottom: 100px;
+  margin-left: 15px;
+}
+
+.title-outer{
+  display: flex;justify-content: center;width:100vw;
+}
+.title{
+  max-width: fit-content;
+  color: white;
+  transform: translate(0px,20px);
+  text-align: center;
+  
+  justify-content: center;
+  font-size: 25px;
+}
+
+.one{
+  transform: translate(0px,500%);
+}
+
+
+.footer-cont {
+  display: flex;
+  background-color: #3c2d20;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  bottom: 0;
+}
+
+
+
+.icon {
+  color: #f0f8ff;
+  text-decoration: none;
+}
+
+.icons {
+  background-color: #3c2d20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.icons a {
+  padding: 27px;
+}
+
+.icon:hover {
+  color: black;
+}
+
+
+
+i:hover {
+  color: black;
+}
+
+.result-title{
+  font-weight: bolder;
+}
+.result-text{
+  font-weight: 400;
+}
+
+
+  @keyframes example {
+    from {background-color: black;}
+    to {background-color: white;}
+  }

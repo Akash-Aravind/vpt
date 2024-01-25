@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+{%block title%}
+home page
+{%endblock%}
+
+
+{%block content%}
+    <form action="{% url 'new' %}" method="POST">
+        {% csrf_token %}
+    <h2>Abhidhana sindhamani reference site </h2>
+    <input type="text"  class="ok" name="txtinp">
+    <button type="submit" >Search</button>
+    </form>
+    <div class="img-back">example div</div>
+    <img src="{% static "bharathiyar.png" %}" alt="asdf">
+{%endblock%}

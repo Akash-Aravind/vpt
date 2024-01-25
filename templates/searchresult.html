@@ -1,0 +1,70 @@
+
+{%extends "base.html"%}
+{%block title%}
+search results
+{%endblock%}
+
+{%block hd%}
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        const scrollButton = document.getElementById("btn");
+        
+            
+            const section = document.getElementById("anonymous");
+            const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: sectionTop,
+                behavior: "smooth"
+            });
+            
+    
+
+       
+    });
+</script>
+{%endblock%}
+
+{%block content1%}
+
+    <!-- <h2>This is from search.html</h2> -->
+    {%if not final_queryset%}
+    <h2>Sorry no results for the query :(</h2>
+    {%endif%}
+
+
+
+    {%for i in final_queryset%}
+        <div class="container">
+        
+        <div>
+            <h2 class="result-title">{{i.key}}:- </h2>
+        </div>
+        <div class="value">
+            <h2 style="max-width: 100%;" class="result-text">{{i.values}}</h2>
+        </div>
+
+    </div>
+    {% endfor %}
+
+    <footer style="background-color: #4A3728; color:white">
+        <div class="footer-cont">
+            designed by &copy; Akash Gayatri Naveen 
+        </div>
+        <div class="icons">
+            <a href="https://www.instagram.com/akash___aravind/" class="fa fa-instagram icon"></a>
+            <a href="https://www.facebook.com/profile.php?id=100068235678930" class="fa fa-facebook icon"></a>
+            <a href="https://twitter.com/akasharavindbro" class="fa fa-twitter icon"></a>
+            <a href="https://github.com/Akash-Aravind" class="fa fa-git-square icon"></a>
+    
+    
+        </div>
+        <div class="icons" style="padding:14px;">Reference website 
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwj38djA-veDAxUFbGwGHTETDRYQFnoECBAQAQ&url=https%3A%2F%2Farchive.org%2Fdetails%2Fin.ernet.dli.2015.430244&usg=AOvVaw3JIxr4HjvS-Lqpg2Qv4ud8&opi=89978449" style="padding:0">
+                <i class="material-icons icon ap" style="font-size:24px;transform:translate(8px,2px)">
+                    cloud
+                </i></a>
+        </div>
+    </footer>
+{%endblock%}

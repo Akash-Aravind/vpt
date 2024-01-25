@@ -1,0 +1,11 @@
+
+
+  .ok{
+    border: 2px solid red;height:45px;width:300px;
+  }
+  .img{
+    background-image: url("D:\\bharathiyar.png");
+    height:300px;
+    width: 200px;
+    background-color: black;
+  }

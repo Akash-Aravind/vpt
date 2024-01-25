@@ -1,0 +1,32 @@
+
+{%extends "base.html"%}
+{%block title%}
+search results
+{%endblock%}
+
+
+
+{%block content1%}
+
+    <!-- <h2>This is from search.html</h2> -->
+    {%if not final_queryset%}
+    <h2>Sorry no results for the query :(</h2>
+    {%endif%}
+
+
+
+    {%for i in final_queryset%}
+        <div style="border:1px solid green;width:100%;text-overflow: ellipsis;">
+        
+        <div>
+            <h2>{{i.key}}:</h2>
+        </div>
+        <div style="max-width: max-content;">
+            <h2>{{i.values}}</h2>
+        </div>
+
+    </div>
+    {% endfor %}
+
+
+{%endblock%}

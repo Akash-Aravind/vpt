@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        
+        {%block title%}
+        {%endblock%}
+    </title>
+    
+</head>
+<body>
+    
+    {%block content%}
+    <div class="tint"></div>
+    <form action="{% url 'new' %}" method="POST" class="box">
+        {% csrf_token %}
+    <h2>Abhidhana sindhamani reference site </h2>
+    <input type="text"  class="ok" name="txtinp" placeholder="Enter any tamil word...." >
+    <button type="submit" >Search</button>
+    </form>
+    <img src="{% static 'thiruvalluvar.jpg' %}" class="img"/>
+    {%endblock%}
+
+
+    {%block content1%}
+    {%endblock%}
+
+</body>
+</html>

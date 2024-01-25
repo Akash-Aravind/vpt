@@ -1,0 +1,44 @@
+
+{%extends "index.html"%}
+{%block title%}
+search results
+{%endblock%}
+
+
+
+{%block content1%}
+
+    <!-- <h2>This is from search.html</h2> -->
+    {%if not objs%}
+    <h2>Sorry no results for the query :(</h2>
+    {%endif%}
+    <!-- This for loop is for the word matched with the keys -->
+    {%for i in objs%}
+        <div style="border:1px solid green">
+
+        
+        <div>
+            <h2>{{i.key}}:</h2>
+        </div>
+        <div style="max-width: max-content;">
+            <h2>{{i.values}}</h2>
+        </div>
+
+    </div>
+    {% endfor %} 
+    <!-- This for loop is for the word matched with the values -->
+
+    {%for i in secondobjs%}
+    <div>Hello</div>
+    <div style="border:1px solid green">
+
+        <div>
+            <h2>{{i.key}}:</h2>
+        </div>
+        <div style="max-width: max-content;">
+            <h2>{{i.values}}</h2>
+        </div>
+    </div>
+
+    {% endfor %} 
+{%endblock%}
