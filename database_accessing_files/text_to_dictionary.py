@@ -58,7 +58,7 @@ for i in range(len(tokens)-2):
             elif(len(temp)<5000):
                 temp=temp.replace("$","")
                 temp=temp.replace("@","")
-                temp=temp.replace("்","")
+                # temp=temp.replace("்","")
                 
                 dictio[key]=temp
             temp=""
